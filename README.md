@@ -1,6 +1,12 @@
 # lumbar_biofeedback
 
-This package is used to predict lumbar bio-torque using wearable sensors. It includes both python and matlab helper functions (to manipulated c3d files and plot feedback). 
+This package is used to predict lumbar bio-torque using wearable sensors. It includes both python and matlab helper functions (to manipulated c3d files and plot feedback). To use this package, Install:
+
+Anaconda - https://docs.anaconda.com/anaconda/install/windows/
+Jupyter Notebook - https://jupyter.org/install
+Matlab Engine - https://www.mathworks.com/help/matlab/matlab_external/install-the-matlab-engine-for-python.html
+
+
 
 ### biofeedback_pipeline.ipynb 
 This is the main code. In this code, it reads IMU data and processed bio-torque ground truth data to train a ML model (with the help of readSTO.m). Once it does this, it reads the IMU data from the specificied c3d data. It converts to the c3d into useable data (generate_feature_tables.m, generate_tables.m) for the ML algorithm to predict the bio-torque. Once the bio-torque is predicted, it calls a matlab function (plot_torque_info.m) to output visual feedback to a user.
