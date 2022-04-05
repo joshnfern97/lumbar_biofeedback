@@ -23,3 +23,5 @@ run "pip3 install --upgrade --user nbconvert" in anaconda prompt
 5) when running biofeedback_pipeline.ipynb, function height is not defined for input argument of type double in generate_feature_tables.m
 
 change height(data) in generate_feature_tables.m to size(data, 1)
+
+6) If path to DOE experiment training data csv files, c3d files, or ground truth torque STO files is incorrect in the notebook, change the path
