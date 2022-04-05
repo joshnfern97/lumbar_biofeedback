@@ -1,0 +1,25 @@
+1) No module exisits (numpy, pandas, xgboost, matplotlib, etc.)
+
+Run "conda install [module name]" or "pip install [module name]" in anaconda prompt
+
+2) Cannot import matlab engine even though it is already installed
+
+Check that the python.exe in the anaconda3 folder is in the system PATH environment variable.
+Then run the 'python setup.py install' command in command prompt again as described in the matlab engine installation instructions.
+
+3) If the version is incorrect
+
+See
+https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/support/sysreq/files/python-compatibility.pdf
+to figure out which python version is compatible with the matlab version 
+
+the run "conda install python = [X.X]" in the anaconda prompt
+
+4) After installing the new python version the "Jupyter Notebook 500 : Internal Server Error" error may occur when opening the notebook
+
+
+run "pip3 install --upgrade --user nbconvert" in anaconda prompt
+
+5) when running biofeedback_pipeline.ipynb, function height is not defined for input argument of type double in generate_feature_tables.m
+
+change height(data) in generate_feature_tables.m to size(data, 1)
