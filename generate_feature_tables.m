@@ -116,7 +116,7 @@ data = [right_FP_x, right_FP_y, right_FP_z, ...
 
 N_features = length(feature_column_names);
 
-row_number = floor((height(data)-window)/increment)+1;
+row_number = floor((size(data,1)-window)/increment)+1;
 
 feature_table = zeros(row_number, N_features);
 
